@@ -1,30 +1,30 @@
 # I dette workflow vil vi køre 2 jobs. Det ene i Ubuntu det andet i Windows.
-name: Shell Commands Python
+#name: Shell Commands Python
 
 #on: [ push ]
 
-jobs:
-  run-shell-commands:
-    runs-on: ubuntu-latest
-    steps:
-      - name: echo a string
-        run: echo "hej med dig"
-      - name: multi line script
-        run: |
-          node -v
-          npm -v
-          mvn -v
-      - name: Python command
-        run: |
-          import platform
-          print(platform.processor())
-        shell: python
-  run-windows-commands:
-    runs-on: windows-latest
-    needs: [run-shell-commands]
-    steps:
-      - name: Directory Powershell
-        run: Get-Location
-      - name: Directory Bash
-        run: pwd
-        shell: bash
+#jobs:
+#  run-shell-commands:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: echo a string
+#        run: echo "hej med dig"
+#      - name: multi line script
+#        run: |
+#          node -v
+#          npm -v
+#          mvn -v
+#      - name: Python command
+#        run: |
+#          import platform
+#          print(platform.processor())
+#        shell: python
+#  run-windows-commands:
+#    runs-on: windows-latest
+#    needs: [run-shell-commands]
+#    steps:
+#      - name: Directory Powershell
+#        run: Get-Location
+#      - name: Directory Bash
+#        run: pwd
+#        shell: bash
