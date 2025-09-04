@@ -1,7 +1,7 @@
 # I dette workflow vil vi køre 2 jobs. Det ene i Ubuntu det andet i Windows.
 name: Shell Commands Python
 
-on: [ push ]
+#on: [ push ]
 
 jobs:
   run-shell-commands:
